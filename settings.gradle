@@ -1,2 +1,3 @@
 rootProject.name = "AndroidStudy"
 include ':app'
+include ':baselibrary'
