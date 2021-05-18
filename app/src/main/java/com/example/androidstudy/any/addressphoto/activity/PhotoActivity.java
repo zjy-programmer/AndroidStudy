@@ -42,5 +42,6 @@ public class PhotoActivity extends AppCompatActivity {
         binding.rvPhoto.setLayoutManager(new GridLayoutManager(this, 4));
         binding.rvPhoto.setAdapter(adapter);
         adapter.setLists(photoBeans);
+        // 冲突一下
     }
 }
