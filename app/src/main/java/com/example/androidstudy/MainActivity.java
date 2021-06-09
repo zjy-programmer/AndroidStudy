@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.androidstudy.any.addressphoto.activity.AddressPhotoActivity;
+import com.example.androidstudy.any.coordinatorlayout.CoordinatorLayoutTestActivity;
 import com.example.androidstudy.any.fonttest.FontTestActivity;
+import com.example.androidstudy.any.nestedscroll.NestedScrollActivity;
 import com.example.androidstudy.databinding.ActivityMainBinding;
 import com.example.baselibrary.activity.BaseActivity;
 
@@ -39,5 +41,13 @@ public class MainActivity extends BaseActivity {
 
     public void toFontTest(View view) {
         toActivity(FontTestActivity.class);
+    }
+
+    public void toCoordinatorLayout(View view) {
+        toActivity(CoordinatorLayoutTestActivity.class);
+    }
+
+    public void toNestedScroll(View view) {
+        toActivity(NestedScrollActivity.class);
     }
 }

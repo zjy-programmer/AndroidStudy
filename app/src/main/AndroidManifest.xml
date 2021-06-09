@@ -14,7 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidStudy">
-        <activity android:name=".any.addressphoto.activity.PhotoActivity"></activity>
+        <activity android:name=".any.nestedscroll.NestedScrollActivity"></activity>
+        <activity android:name=".any.coordinatorlayout.CoordinatorLayoutTestActivity" />
+        <activity android:name=".any.addressphoto.activity.PhotoActivity" />
         <activity android:name=".any.fonttest.FontTestActivity" />
         <activity android:name=".any.addressphoto.activity.AddressPhotoActivity" />
         <activity android:name=".MainActivity">

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".any.nestedscroll.NestedScrollActivity">
+
+    <com.example.androidstudy.any.nestedscroll.NestedScrollParent
+        android:id="@+id/nested_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#ffcccc"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="#ccffcc"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="来到布达佩斯的城堡山，很容易就能看到这座拥有石造尖塔、镶嵌着彩色马赛克屋顶的马加什教堂。这座建筑的外观色泽亮丽，属新哥特式教堂，蕴含了匈牙利民俗、新艺术风格和土耳...来到布达佩斯的城堡山，很容易就能看到这座拥有石造尖塔、镶嵌着彩色马赛克屋顶的马加什教堂。这座建筑的外观色泽亮丽，属新哥特式教堂，蕴含了匈牙利民俗、新艺术风格和土耳...来到布达佩斯的城堡山，很容易就能看到这座拥有石造尖塔、镶嵌着彩色马赛克屋顶的马加什教堂。
+
+这座建筑的外观色泽亮丽，属新哥特式教堂，蕴含了匈牙利民俗、新艺术风格和土耳...来到布达佩斯的城堡山，很容易就能看到这座拥有石造尖塔、镶嵌着彩色马赛克屋顶的马加什教堂。这座建筑的外观色泽亮丽，属新哥特式教堂，蕴含了匈牙利民俗、新艺术风格和土耳...来到布达佩斯的城堡山，很容易就能看到这座拥有石造尖塔、镶嵌着彩色马赛克屋顶的马加什教堂。
+
+这座建筑的外观色泽亮丽，属新哥特式教堂，蕴含了匈牙利民俗、新艺术风格和土耳...来到布达佩斯的城堡山，很容易就能看到这座拥有石造尖塔、镶嵌着彩色马赛克屋顶的马加什教堂。这座建筑的外观色泽亮丽，属新哥特式教堂，蕴含了匈牙利民俗、新艺术风格和土耳...来到布达佩斯的城堡山，很容易就能看到这座拥有石造尖塔、镶嵌着彩色马赛克屋顶的马加什教堂。这座建筑的外观色泽亮丽，属新哥特式教堂，蕴含了匈牙利民俗、新艺术风格和土耳...来到布达佩斯的城堡山，很容易就能看到这座拥有石造尖塔、镶嵌着彩色马赛克屋顶的马加什教堂。
+
+这座建筑的外观色泽亮丽，属新哥特式教堂，蕴含了匈牙利民俗、新艺术风格和土耳...来到布达佩斯的城堡山，很容易就能看到这座拥有石造尖塔、镶嵌着彩色马赛克屋顶的马加什教堂。这座建筑的外观色泽亮丽，属新哥特式教堂，蕴含了匈牙利民俗、新艺术风格和土耳...来到布达佩斯的城堡山，很容易就能看到这座拥有石造尖塔、镶嵌着彩色马赛克屋顶的马加什教堂。这座建筑的外观色泽亮丽，属新哥特式教堂，蕴含了匈牙利民俗、新艺术风格和土耳...来到布达佩斯的城堡山，很容易就能看到这座拥有石造尖塔、镶嵌着彩色马赛克屋顶的马加什教堂。这座建筑的外观色泽亮丽，属新哥特式教堂，蕴含了匈牙利民俗、新艺术风格和土耳座建筑的外观色泽亮丽，属新哥特式教堂，蕴含了匈牙利民俗、新艺术风格和土耳座建筑的外观色泽亮丽，属新哥特式教堂，蕴含了匈牙利民俗、新艺术风格和土耳座建筑的外观色泽亮丽，属新哥特式教堂，蕴含了匈牙利民俗、新艺术风格和土耳。
+"
+                android:textSize="16sp"/>
+        </androidx.core.widget.NestedScrollView>
+
+    </com.example.androidstudy.any.nestedscroll.NestedScrollParent>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

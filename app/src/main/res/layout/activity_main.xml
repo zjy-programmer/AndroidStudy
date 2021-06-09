@@ -32,5 +32,27 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_to_font_test" />
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tv_to_coordinator_layout_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="toCoordinatorLayout"
+            android:text="跳转到coordinatorLayout练习"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_to_address_photo" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tv_to_nested_scroll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="toNestedScroll"
+            android:text="跳转到NestedScroll练习"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_to_coordinator_layout_test"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
