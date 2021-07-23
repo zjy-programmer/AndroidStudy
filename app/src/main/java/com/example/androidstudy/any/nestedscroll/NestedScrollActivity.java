@@ -27,15 +27,26 @@ public class NestedScrollActivity extends BaseActivity {
         binding = ActivityNestedScrollBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.tvHead.post(this::initView);
+//        binding.tvHead.post(this::initView);
+        initView();
     }
 
     private void initView() {
+        binding.rvHead.setLayoutManager(new LinearLayoutManager(this));
+        binding.rvHead.setAdapter(new MyAdapter(true));
+        binding.rvHead.setNestedScrollingEnabled(false);
+
         binding.rv.setLayoutManager(new LinearLayoutManager(this));
-        binding.rv.setAdapter(new MyAdapter());
+        binding.rv.setAdapter(new MyAdapter(false));
     }
 
     static class MyAdapter extends RecyclerView.Adapter<MyHolder> {
+        private boolean isHead;
+
+        public MyAdapter(boolean isHead) {
+            this.isHead = isHead;
+        }
+
         @NonNull
         @Override
         public MyHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -50,7 +61,7 @@ public class NestedScrollActivity extends BaseActivity {
 
         @Override
         public int getItemCount() {
-            return 100;
+            return isHead ? 10 : 100;
         }
     }
     
