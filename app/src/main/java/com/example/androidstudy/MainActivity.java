@@ -6,9 +6,11 @@ import android.view.View;
 
 import com.example.androidstudy.any.addressphoto.activity.AddressPhotoActivity;
 import com.example.androidstudy.any.coordinatorlayout.CoordinatorLayoutTestActivity;
+import com.example.androidstudy.any.customview.CustomViewActivity;
 import com.example.androidstudy.any.fonttest.FontTestActivity;
 import com.example.androidstudy.any.nestedscroll.NestedScrollActivity;
 import com.example.androidstudy.databinding.ActivityMainBinding;
+import com.example.androidstudy.hencoder.HenCoderActivity;
 import com.example.baselibrary.activity.BaseActivity;
 
 public class MainActivity extends BaseActivity {
@@ -20,18 +22,6 @@ public class MainActivity extends BaseActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-    }
-
-    private void toActivity(Class<?> clazz) {
-        toActivity(clazz, null);
-    }
-
-    private void toActivity(Class<?> clazz, Bundle bundle) {
-        Intent intent = new Intent(this, clazz);
-        if (bundle != null) {
-            intent.putExtras(bundle);
-        }
-        startActivity(intent);
     }
 
     public void toAddressPhoto(View view) {
@@ -49,5 +39,13 @@ public class MainActivity extends BaseActivity {
 
     public void toNestedScroll(View view) {
         toActivity(NestedScrollActivity.class);
+    }
+
+    public void toCustomViewTest(View view) {
+        toActivity(CustomViewActivity.class);
+    }
+
+    public void toHenCoderTest(View view) {
+        toActivity(HenCoderActivity.class);
     }
 }

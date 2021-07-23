@@ -54,5 +54,26 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_to_coordinator_layout_test"/>
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tv_custom_view_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="toCustomViewTest"
+            android:text="跳转到自定义View练习"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_to_nested_scroll"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tv_hen_coder_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="toHenCoderTest"
+            android:text="跳转到HenCoder练习"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_custom_view_test"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

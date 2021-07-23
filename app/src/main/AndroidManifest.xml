@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name="com.example.baselibrary.MyApplication"
@@ -13,8 +14,12 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AndroidStudy">
-        <activity android:name=".any.nestedscroll.NestedScrollActivity"></activity>
+        android:theme="@style/Theme.AndroidStudy"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".hencoder.HenCoderTestActivity" />
+        <activity android:name=".hencoder.HenCoderActivity" />
+        <activity android:name=".any.customview.CustomViewActivity" />
+        <activity android:name=".any.nestedscroll.NestedScrollActivity" />
         <activity android:name=".any.coordinatorlayout.CoordinatorLayoutTestActivity" />
         <activity android:name=".any.addressphoto.activity.PhotoActivity" />
         <activity android:name=".any.fonttest.FontTestActivity" />

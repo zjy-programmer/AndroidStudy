@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".any.customview.CustomViewActivity">
+
+    <com.example.androidstudy.any.customview.shader.BitmapShaderView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.example.androidstudy.any.customview.shader.LinearGradientView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.example.androidstudy.any.customview.shader.SweepGradientView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.example.androidstudy.any.customview.shader.RadialGradientView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.example.androidstudy.any.customview.shader.ComposeShaderView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.example.androidstudy.any.customview.filter.ColorFilterView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.example.androidstudy.any.customview.filter.BlurMaskFilterView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.example.androidstudy.any.customview.filter.EmbossMaskFilterView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.example.androidstudy.any.customview.xfermode.XfermodeView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.example.androidstudy.any.customview.ClockView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.example.androidstudy.any.customview.path.PathView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.example.androidstudy.any.customview.EventViewGroup
+        android:id="@+id/vg_event"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/black">
+        <com.example.androidstudy.any.customview.EventView
+            android:id="@+id/v_event"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/white"/>
+    </com.example.androidstudy.any.customview.EventViewGroup>
+</androidx.constraintlayout.widget.ConstraintLayout>

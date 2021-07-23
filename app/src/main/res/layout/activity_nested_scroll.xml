@@ -15,7 +15,8 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:background="#ffcccc"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:visibility="gone">
 
         <View
             android:layout_width="match_parent"
@@ -40,5 +41,46 @@
         </androidx.core.widget.NestedScrollView>
 
     </com.example.androidstudy.any.nestedscroll.NestedScrollParent>
+
+    <com.example.androidstudy.any.nestedscroll.StickyNavNestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_head"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/design_default_color_primary"
+                android:text="假装是个头部"
+                android:gravity="center"
+                android:textSize="40sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/tv_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/design_default_color_secondary"
+                android:text="假装是个需要吸顶的tab"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:textColor="@color/white"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+    </com.example.androidstudy.any.nestedscroll.StickyNavNestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

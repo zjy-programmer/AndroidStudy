@@ -7,7 +7,7 @@ import android.view.ViewParent;
 import android.widget.LinearLayout;
 
 import com.example.baselibrary.util.LogUtil;
-import com.example.baselibrary.util.ScreenUtil;
+import com.example.baselibrary.util.WidgetUtil;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -143,7 +143,7 @@ public class NestedScrollParent extends LinearLayout implements NestedScrollingP
                         + "dx: " + dx
                         + " dy: " + dy
                         + " type: " + type);
-        boolean hiddenTop = dy > 0 && getScrollY() < ScreenUtil.dp2px(150);
+        boolean hiddenTop = dy > 0 && getScrollY() < WidgetUtil.dp2px(150);
         boolean showTop = dy < 0 && getScrollY() > 0 && !ViewCompat.canScrollVertically(target, -1);
 
         if (hiddenTop || showTop)
