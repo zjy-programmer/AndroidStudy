@@ -16,6 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidStudy"
         android:usesCleartextTraffic="true">
+        <activity android:name=".any.db.SqlLiteDBActivity"></activity>
         <activity android:name=".hencoder.HenCoderTestActivity" />
         <activity android:name=".hencoder.HenCoderActivity" />
         <activity android:name=".any.customview.CustomViewActivity" />

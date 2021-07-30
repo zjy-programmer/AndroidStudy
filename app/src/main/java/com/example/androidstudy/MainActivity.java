@@ -7,6 +7,7 @@ import android.view.View;
 import com.example.androidstudy.any.addressphoto.activity.AddressPhotoActivity;
 import com.example.androidstudy.any.coordinatorlayout.CoordinatorLayoutTestActivity;
 import com.example.androidstudy.any.customview.CustomViewActivity;
+import com.example.androidstudy.any.db.SqlLiteDBActivity;
 import com.example.androidstudy.any.fonttest.FontTestActivity;
 import com.example.androidstudy.any.nestedscroll.NestedScrollActivity;
 import com.example.androidstudy.databinding.ActivityMainBinding;
@@ -47,5 +48,9 @@ public class MainActivity extends BaseActivity {
 
     public void toHenCoderTest(View view) {
         toActivity(HenCoderActivity.class);
+    }
+
+    public void toDBTest(View view) {
+        toActivity(SqlLiteDBActivity.class);
     }
 }
