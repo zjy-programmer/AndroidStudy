@@ -5,9 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.example.androidstudy.R
+import com.example.baselibrary.activity.BaseActivity
 import com.example.baselibrary.util.LogUtil
 
-class SqlLiteDBActivity : AppCompatActivity() {
+class SqlLiteDBActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sql_lite_dbactivity)

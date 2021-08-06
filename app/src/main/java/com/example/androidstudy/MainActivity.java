@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.androidstudy.any.addressphoto.activity.AddressPhotoActivity;
+import com.example.androidstudy.any.contentprovider.ContentProviderTestActivity;
 import com.example.androidstudy.any.coordinatorlayout.CoordinatorLayoutTestActivity;
 import com.example.androidstudy.any.customview.CustomViewActivity;
 import com.example.androidstudy.any.db.SqlLiteDBActivity;
@@ -52,5 +53,9 @@ public class MainActivity extends BaseActivity {
 
     public void toDBTest(View view) {
         toActivity(SqlLiteDBActivity.class);
+    }
+
+    public void toContentProvider(View view) {
+        toActivity(ContentProviderTestActivity.class);
     }
 }

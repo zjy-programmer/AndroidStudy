@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
 
     <application
         android:name="com.example.baselibrary.MyApplication"
@@ -16,7 +17,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidStudy"
         android:usesCleartextTraffic="true">
-        <activity android:name=".any.db.SqlLiteDBActivity"></activity>
+        <activity android:name=".any.contentprovider.ContentProviderTestActivity"/>
+
+        <provider
+            android:name=".any.contentprovider.MyContentProvider"
+            android:authorities="com.example.androidstudy.provider"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".any.db.SqlLiteDBActivity" />
         <activity android:name=".hencoder.HenCoderTestActivity" />
         <activity android:name=".hencoder.HenCoderActivity" />
         <activity android:name=".any.customview.CustomViewActivity" />
