@@ -85,6 +85,12 @@
             android:onClick="toContentProvider"/>
 
         <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RecyclerView练习"
+            android:onClick="toRecyclerView"/>
+
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/tv_hen_coder_test"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

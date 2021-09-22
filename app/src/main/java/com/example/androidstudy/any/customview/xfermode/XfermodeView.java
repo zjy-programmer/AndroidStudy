@@ -1,5 +1,7 @@
 package com.example.androidstudy.any.customview.xfermode;
 
+import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -29,6 +31,7 @@ public class XfermodeView extends View {
     private Paint mPaint;
     private Bitmap srcBitmap; // 源图片
     private Bitmap desBitmap; // 目标图片
+    private PorterDuffXfermode porterDuffXfermode;
 
     public XfermodeView(Context context) {
         this(context, null);
@@ -47,30 +50,34 @@ public class XfermodeView extends View {
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG); // ANTI_ALIAS_FLAG抗锯齿
         mPaint.setDither(true); // 防抖动 使图片更平滑
 
-        BitmapDrawable srcDrawable = (BitmapDrawable) ResourcesCompat.getDrawable(getResources(), R.mipmap.icon_green, getContext().getTheme());
+        BitmapDrawable srcDrawable = (BitmapDrawable) ResourcesCompat.getDrawable(getResources(), R.mipmap.icon_heart_white, getContext().getTheme());
         if (srcDrawable == null) {
             return;
         }
-        BitmapDrawable desDrawable = (BitmapDrawable) ResourcesCompat.getDrawable(getResources(), R.mipmap.icon_red, getContext().getTheme());
+        BitmapDrawable desDrawable = (BitmapDrawable) ResourcesCompat.getDrawable(getResources(), R.mipmap.icon_heart_blue, getContext().getTheme());
         if (desDrawable == null) {
             return;
         }
         srcBitmap = srcDrawable.getBitmap();
         desBitmap = desDrawable.getBitmap();
+        porterDuffXfermode = new PorterDuffXfermode(PorterDuff.Mode.SRC_ATOP);
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        setLayerType(LAYER_TYPE_SOFTWARE, null);
+        int saved = canvas.saveLayer(null, null, Canvas.ALL_SAVE_FLAG);
+//        setLayerType(LAYER_TYPE_SOFTWARE, null);
 
         // 不设置Xfermode
 //        canvas.drawBitmap(srcBitmap, 0, 0, mPaint);
 //        canvas.drawBitmap(desBitmap, 200, 200, mPaint);
 
-        // 可能是图片的问题 设置模式跟网上说的不一样 好多都不展示了
         canvas.drawBitmap(srcBitmap, 0, 0, mPaint);
-        mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.OVERLAY));
-        canvas.drawBitmap(desBitmap, 200, 200, mPaint);
+        mPaint.setXfermode(porterDuffXfermode);
+        canvas.drawBitmap(desBitmap, 100, 100, mPaint);
+        mPaint.setXfermode(null);
+
+        canvas.restoreToCount(saved);
     }
 }

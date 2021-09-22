@@ -11,6 +11,7 @@ import com.example.androidstudy.any.customview.CustomViewActivity;
 import com.example.androidstudy.any.db.SqlLiteDBActivity;
 import com.example.androidstudy.any.fonttest.FontTestActivity;
 import com.example.androidstudy.any.nestedscroll.NestedScrollActivity;
+import com.example.androidstudy.any.recyclerview.RecyclerviewActivity;
 import com.example.androidstudy.databinding.ActivityMainBinding;
 import com.example.androidstudy.hencoder.HenCoderActivity;
 import com.example.baselibrary.activity.BaseActivity;
@@ -57,5 +58,9 @@ public class MainActivity extends BaseActivity {
 
     public void toContentProvider(View view) {
         toActivity(ContentProviderTestActivity.class);
+    }
+
+    public void toRecyclerView(View view) {
+        toActivity(RecyclerviewActivity.class);
     }
 }
