@@ -25,9 +25,6 @@ public class MainActivity extends BaseActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-        // 测试git的revert 11111
-        // 测试git的revert 22222
     }
 
     public void toAddressPhoto(View view) {
