@@ -25,6 +25,7 @@ public class MainActivity extends BaseActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        // 这是用来测试revert的代码
     }
 
     public void toAddressPhoto(View view) {
