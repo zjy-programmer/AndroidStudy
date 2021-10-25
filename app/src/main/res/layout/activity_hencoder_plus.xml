@@ -14,4 +14,12 @@
         android:gravity="center"
         android:textSize="16sp"
         android:onClick="toHenCoderPlusChapter11"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="十二章练习"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:onClick="toHenCoderPlusChapter12"/>
 </LinearLayout>
