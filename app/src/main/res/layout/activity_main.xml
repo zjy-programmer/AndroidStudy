@@ -100,5 +100,16 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_db_test"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tv_hen_coder_plus_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="toHenCoderPlusTest"
+            android:text="跳转到HenCoderPlus练习"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_db_test"/>
     </LinearLayout>
 </ScrollView>

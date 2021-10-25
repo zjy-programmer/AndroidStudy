@@ -18,6 +18,12 @@
         android:theme="@style/Theme.AndroidStudy"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".hencoderplus.chapter11.HenCoderPlusChapter11Activity"
+            android:exported="true" />
+        <activity
+            android:name=".hencoderplus.HenCoderPlusActivity"
+            android:exported="true" />
+        <activity
             android:name=".any.recyclerview.RecyclerviewActivity"
             android:exported="true" />
         <activity android:name=".any.contentprovider.ContentProviderTestActivity" />

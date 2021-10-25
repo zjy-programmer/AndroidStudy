@@ -25,17 +25,17 @@ public class WidgetUtil {
 
     public static int getScreenWidth() {
         WindowManager service = (WindowManager) MyApplication.getInstance().getSystemService(Context.WINDOW_SERVICE);
-//        DisplayMetrics displayMetrics = new DisplayMetrics();
-//        service.getDefaultDisplay().getMetrics(displayMetrics);
-//        return displayMetrics.widthPixels;
-        return service.getCurrentWindowMetrics().getBounds().width();
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        service.getDefaultDisplay().getMetrics(displayMetrics);
+        return displayMetrics.widthPixels;
+//        return service.getCurrentWindowMetrics().getBounds().width();
     }
 
     public static int getScreenHeight() {
         WindowManager service = (WindowManager) MyApplication.getInstance().getSystemService(Context.WINDOW_SERVICE);
-//        DisplayMetrics displayMetrics = new DisplayMetrics();
-//        service.getDefaultDisplay().getMetrics(displayMetrics);
-//        return displayMetrics.heightPixels;
-        return service.getCurrentWindowMetrics().getBounds().height();
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        service.getDefaultDisplay().getMetrics(displayMetrics);
+        return displayMetrics.heightPixels;
+//        return service.getCurrentWindowMetrics().getBounds().height();
     }
 }

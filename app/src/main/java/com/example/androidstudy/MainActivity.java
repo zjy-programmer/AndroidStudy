@@ -2,6 +2,8 @@ package com.example.androidstudy;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Debug;
+import android.os.Process;
 import android.view.View;
 
 import com.example.androidstudy.any.addressphoto.activity.AddressPhotoActivity;
@@ -14,6 +16,7 @@ import com.example.androidstudy.any.nestedscroll.NestedScrollActivity;
 import com.example.androidstudy.any.recyclerview.RecyclerviewActivity;
 import com.example.androidstudy.databinding.ActivityMainBinding;
 import com.example.androidstudy.hencoder.HenCoderActivity;
+import com.example.androidstudy.hencoderplus.HenCoderPlusActivity;
 import com.example.baselibrary.activity.BaseActivity;
 
 public class MainActivity extends BaseActivity {
@@ -25,6 +28,18 @@ public class MainActivity extends BaseActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+//        testAsDebugMode();
+    }
+
+    /**
+     * 这个方法可以判断是否是在AndroidStudio的debug调试模式
+     */
+    private void testAsDebugMode() {
+        if (Debug.isDebuggerConnected()) {
+            finish();
+            Process.killProcess(Process.myPid());
+        }
     }
 
     public void toAddressPhoto(View view) {
@@ -62,5 +77,9 @@ public class MainActivity extends BaseActivity {
 
     public void toRecyclerView(View view) {
         toActivity(RecyclerviewActivity.class);
+    }
+
+    public void toHenCoderPlusTest(View view) {
+        toActivity(HenCoderPlusActivity.class);
     }
 }
