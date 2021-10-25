@@ -9,5 +9,10 @@
 
     <com.example.androidstudy.hencoderplus.chapter13.SportView
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.example.androidstudy.hencoderplus.chapter13.PhotoTextView
+        android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 </LinearLayout>
