@@ -18,6 +18,9 @@
         android:theme="@style/Theme.AndroidStudy"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".hencoderplus.chapter12.HenCoderPlusChapter12Activity"
+            android:exported="true" />
+        <activity
             android:name=".hencoderplus.chapter11.HenCoderPlusChapter11Activity"
             android:exported="true" />
         <activity

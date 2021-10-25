@@ -8,6 +8,10 @@
 
     <com.example.androidstudy.hencoderplus.chapter11.DashBoardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
 
+    <com.example.androidstudy.hencoderplus.chapter11.PieChartView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </LinearLayout>
