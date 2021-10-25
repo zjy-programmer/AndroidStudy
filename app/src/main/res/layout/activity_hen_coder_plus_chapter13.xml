@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".hencoderplus.chapter13.HenCoderPlusChapter13Activity"
+    android:orientation="vertical">
+
+    <com.example.androidstudy.hencoderplus.chapter13.SportView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>
