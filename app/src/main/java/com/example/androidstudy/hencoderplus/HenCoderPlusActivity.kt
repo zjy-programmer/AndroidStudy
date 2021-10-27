@@ -10,6 +10,7 @@ import com.example.androidstudy.hencoderplus.chapter13.HenCoderPlusChapter13Acti
 import com.example.androidstudy.hencoderplus.chapter17.HenCoderPlus17Activity
 import com.example.androidstudy.hencoderplus.chapter19.HenCoderPlus19Activity
 import com.example.androidstudy.hencoderplus.chapter20.HenCoderPlus20Activity
+import com.example.androidstudy.hencoderplus.chapter34.HenCoderPlus34Activity
 import com.example.baselibrary.activity.BaseActivity
 
 class HenCoderPlusActivity : BaseActivity() {
@@ -40,5 +41,9 @@ class HenCoderPlusActivity : BaseActivity() {
 
     fun toHenCoderPlusChapter20(view: View) {
         startActivity(Intent(this, HenCoderPlus20Activity::class.java))
+    }
+
+    fun toHenCoderPlusChapter34(view: View) {
+        startActivity(Intent(this, HenCoderPlus34Activity::class.java))
     }
 }
