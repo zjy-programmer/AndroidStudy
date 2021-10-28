@@ -42,4 +42,35 @@ class HenCoderPlus34Activity : AppCompatActivity() {
             }
         }
     }
+
+    fun copyFile(view: android.view.View) {
+        val file = File("$filesDir${File.separator}homework4.txt")
+        val copyFile = File("$filesDir${File.separator}homework4_copy.txt")
+        if (file.exists()) {
+            // kotlin的扩展函数
+//            file.copyTo(copyFile)
+
+            // 自己写
+            val br = FileInputStream(file)
+            val bw = FileOutputStream(copyFile)
+
+            try {
+                val buffer = ByteArray(1024)
+                var length = br.read(buffer)
+                while (length != -1) {
+                    bw.write(buffer, 0, length)
+                    length = br.read(buffer)
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+            } finally {
+                try {
+                    br.close()
+                    bw.close()
+                } catch (e: IOException) {
+                    e.printStackTrace()
+                }
+            }
+        }
+    }
 }

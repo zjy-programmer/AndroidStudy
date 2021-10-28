@@ -19,4 +19,10 @@
         android:text="从文件中读取数据"
         android:onClick="readDataFromFile"/>
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="复制文件"
+        android:onClick="copyFile"/>
+
 </LinearLayout>
