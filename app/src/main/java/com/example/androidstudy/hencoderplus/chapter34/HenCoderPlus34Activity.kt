@@ -83,4 +83,9 @@ class HenCoderPlus34Activity : AppCompatActivity() {
 //        val source = Buffer()
 //        val readAll = source.readAll(sink)
     }
+
+    // okio用法忘了
+    fun copyFileOfOkio(view: android.view.View) {
+
+    }
 }
