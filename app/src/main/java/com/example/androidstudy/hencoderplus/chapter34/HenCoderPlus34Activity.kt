@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.androidstudy.R
 import com.example.baselibrary.util.ToastUtil
+import okio.Buffer
+import okio.Okio
 import java.io.*
 import java.lang.Exception
 
@@ -72,5 +74,13 @@ class HenCoderPlus34Activity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    // okio用法忘了
+    fun readDataFromFileOfOkio(view: android.view.View) {
+//        val file = File("$filesDir${File.separator}homework4.txt")
+//        val sink = Okio.sink(file)
+//        val source = Buffer()
+//        val readAll = source.readAll(sink)
     }
 }
