@@ -7,7 +7,7 @@ android {
     compileSdkVersion 29
 
     defaultConfig {
-        minSdkVersion 21
+        minSdkVersion 24
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -26,6 +26,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
 }
 
 dependencies {
@@ -43,6 +44,9 @@ dependencies {
 //    implementation "androidx.core:core-ktx:$kotlin_version"
     implementation "androidx.core:core-ktx:1.6.0"
     implementation "org.jetbrains.kotlin:kotlin-stdlib:1.5.31"
+
+    api 'com.github.microshow:RxFFmpeg:4.9.0'
+    api 'com.arthenica:mobile-ffmpeg-full:4.4'
 }
 repositories {
     mavenCentral()

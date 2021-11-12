@@ -18,6 +18,9 @@
         android:theme="@style/Theme.AndroidStudy"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".any.rxffmpegtest.RxFFmpegActivity"
+            android:exported="false" />
+        <activity
             android:name=".hencoderplus.chapter34.HenCoderPlus34Activity"
             android:exported="true" />
         <activity

@@ -14,6 +14,7 @@ import com.example.androidstudy.any.db.SqlLiteDBActivity;
 import com.example.androidstudy.any.fonttest.FontTestActivity;
 import com.example.androidstudy.any.nestedscroll.NestedScrollActivity;
 import com.example.androidstudy.any.recyclerview.RecyclerviewActivity;
+import com.example.androidstudy.any.rxffmpegtest.RxFFmpegActivity;
 import com.example.androidstudy.databinding.ActivityMainBinding;
 import com.example.androidstudy.hencoder.HenCoderActivity;
 import com.example.androidstudy.hencoderplus.HenCoderPlusActivity;
@@ -81,5 +82,9 @@ public class MainActivity extends BaseActivity {
 
     public void toHenCoderPlusTest(View view) {
         toActivity(HenCoderPlusActivity.class);
+    }
+
+    public void toFFmpeg(View view) {
+        toActivity(RxFFmpegActivity.class);
     }
 }
