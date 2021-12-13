@@ -89,4 +89,6 @@ public class MainActivity extends BaseActivity {
     }
 
     // 这是用来测试git commit --amend用的数据
+
+    // 测试git rebase -i的edit 修改一下？
 }
