@@ -91,4 +91,6 @@ public class MainActivity extends BaseActivity {
     // 这是用来测试git commit --amend用的数据
 
     // 测试git rebase -i的edit 修改一下？
+
+    // 再测试git rebase -i的reword 上边的edit模式是可以同时修改文件和commit的message的 reword应该只能修改commit的message 貌似一样啊 也能改文件啊
 }
