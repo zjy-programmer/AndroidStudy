@@ -2,6 +2,11 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
 }
+apply plugin: 'MyPlugin'
+
+MyExtend {
+    name "我是自定义的插件的扩展属性"
+}
 
 android {
     compileSdkVersion 29
@@ -20,10 +25,19 @@ android {
         }
     }
 
+//    buildConfigField("String", "type", '"android方法中添加buildConfig字段"') 不能在这加 会报错 因为这个是跟变体关联的
+
     buildTypes {
+//        buildConfigField("String", "type", '"buildTypes方法中添加buildConfig字段"') 不能在这加 会报错 因为这个是跟变体关联的
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "type", '"debug变体里加的buildConfig字段"') // 这加是ok的
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "type", '"release变体里加的buildConfig字段"')
         }
     }
     compileOptions {
@@ -35,6 +49,20 @@ android {
         enabled = true
     }
     ndkVersion '21.0.6113669'
+}
+
+gradle.taskGraph.whenReady {
+    println "当所有task已经准备好了"
+
+    // 打印task对应的类
+    it.allTasks.each { task ->
+//        println "${task.name} : ${task.class.name}"
+        println "${task.name} : ${task.class.name - '_Decorated'}"
+    }
+}
+
+afterEvaluate {
+    println "这里是gradle第二阶段结束 第三阶段开始之前"
 }
 
 dependencies {
