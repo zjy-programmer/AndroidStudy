@@ -20,9 +20,9 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        ndk {
-            abiFilters "armeabi-v7a","arm64-v8a"
-        }
+//        ndk {
+//            abiFilters "armeabi-v7a","arm64-v8a"
+//        }
     }
 
 //    buildConfigField("String", "type", '"android方法中添加buildConfig字段"') 不能在这加 会报错 因为这个是跟变体关联的
