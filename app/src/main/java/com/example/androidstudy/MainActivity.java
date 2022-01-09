@@ -1,6 +1,5 @@
 package com.example.androidstudy;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Debug;
 import android.os.Process;
