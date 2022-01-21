@@ -27,9 +27,11 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        Debug.startMethodTracing();
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+        // 会把trace文件放在/mnt/sdcard/Android/包名/files/dmtrace.trace
+        Debug.stopMethodTracing();
 //        testAsDebugMode();
 
     }
