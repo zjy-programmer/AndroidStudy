@@ -3,3 +3,4 @@ include ':app'
 include ':baselibrary'
 //include ':buildSrc' // 这里必须删掉或注释 因为buildSrc是gradle保留的项目名字 所以这里不能include 但是虽然没有include 却可以正常使用 开发自定义的gradle插件
 println "这里是gradle第一阶段结束 第二阶段开始之前"
+include ':taskaffinitytest'

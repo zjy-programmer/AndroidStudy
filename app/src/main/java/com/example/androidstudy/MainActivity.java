@@ -1,5 +1,7 @@
 package com.example.androidstudy;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Debug;
 import android.os.Process;
@@ -13,6 +15,7 @@ import com.example.androidstudy.any.db.SqlLiteDBActivity;
 import com.example.androidstudy.any.fonttest.FontTestActivity;
 import com.example.androidstudy.any.nestedscroll.NestedScrollActivity;
 import com.example.androidstudy.any.recyclerview.RecyclerviewActivity;
+import com.example.androidstudy.any.reparent.ReparentActivity;
 import com.example.androidstudy.any.rxffmpegtest.RxFFmpegActivity;
 import com.example.androidstudy.any.rxjava.RxjavaTestActivity;
 import com.example.androidstudy.databinding.ActivityMainBinding;
@@ -93,6 +96,15 @@ public class MainActivity extends BaseActivity {
 
     public void toRxjavaTest(View view) {
         toActivity(RxjavaTestActivity.class);
+    }
+
+    // allowTaskReparenting 在android9和android10被移除了 android11又加回来了
+    public void toReparentTest(View view) {
+        Intent intent = new Intent();
+        intent.setAction("zjy.reparent.b");
+        intent.addCategory("zjy.reparent.category");
+//        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 
     // 这是用来测试git commit --amend用的数据
