@@ -1,8 +1,21 @@
+buildscript {
+    repositories {
+        maven { url '../asm_lifecycle_repo'}
+    }
+
+    dependencies {
+        classpath 'com.androidstudy.plugin:asm_lifecycle_plugin:1.0.0'
+    }
+}
+
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
 }
 apply plugin: 'MyPlugin'
+apply plugin: 'androidstudy.asm.lifecycle'
+
+
 
 MyExtend {
     name "我是自定义的插件的扩展属性"
