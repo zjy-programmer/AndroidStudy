@@ -13,6 +13,7 @@ import com.example.androidstudy.any.coordinatorlayout.CoordinatorLayoutTestActiv
 import com.example.androidstudy.any.customview.CustomViewActivity;
 import com.example.androidstudy.any.db.SqlLiteDBActivity;
 import com.example.androidstudy.any.fonttest.FontTestActivity;
+import com.example.androidstudy.any.loadclass.LoadClassTestActivity;
 import com.example.androidstudy.any.nestedscroll.NestedScrollActivity;
 import com.example.androidstudy.any.recyclerview.RecyclerviewActivity;
 import com.example.androidstudy.any.reparent.ReparentActivity;
@@ -105,6 +106,10 @@ public class MainActivity extends BaseActivity {
         intent.addCategory("zjy.reparent.category");
 //        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
+    }
+
+    public void toLoadClassTest(View view) {
+        toActivity(LoadClassTestActivity.class);
     }
 
     // 这是用来测试git commit --amend用的数据

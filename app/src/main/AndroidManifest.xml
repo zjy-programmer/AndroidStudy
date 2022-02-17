@@ -20,10 +20,13 @@
         android:theme="@style/Theme.AndroidStudy"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".any.loadclass.LoadClassTestActivity"
+            android:exported="false" />
+        <activity
             android:name=".any.reparent.ReparentActivity"
+            android:allowTaskReparenting="true"
             android:exported="true"
-            android:taskAffinity="com.firstline3.taskaffinitytest"
-            android:allowTaskReparenting="true"/>
+            android:taskAffinity="com.firstline3.taskaffinitytest" />
         <activity
             android:name=".any.rxjava.RxjavaTestActivity"
             android:exported="false" />
