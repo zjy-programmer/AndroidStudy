@@ -24,8 +24,12 @@ import com.example.androidstudy.hencoder.HenCoderActivity;
 import com.example.androidstudy.hencoderplus.HenCoderPlusActivity;
 import com.example.baselibrary.activity.BaseActivity;
 
+import leakcanary.AppWatcher;
+import leakcanary.LeakCanary;
+
 public class MainActivity extends BaseActivity {
     private ActivityMainBinding binding;
+    private String s = "111";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +42,8 @@ public class MainActivity extends BaseActivity {
         Debug.stopMethodTracing();
 //        testAsDebugMode();
 
+        // LeakCanary检测普通object是否发生泄漏是在watch(方法废弃 已被expectWeaklyReachable这个方法代替)5秒钟后开始检测 如果没有回收则表示泄漏
+        AppWatcher.INSTANCE.getObjectWatcher().expectWeaklyReachable(s, "检测局部变量s是否泄漏");
     }
 
     /**
