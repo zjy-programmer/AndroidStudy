@@ -20,6 +20,18 @@
         android:theme="@style/Theme.AndroidStudy"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".any.imagepicker.ImagePickerTestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".any.smartrefresh.SmartRefreshLayoutTestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".any.tablayout.TabLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".any.coroutines.CoroutinesTestActivity"
+            android:exported="false" />
+        <activity
             android:name=".any.loadclass.LoadClassTestActivity"
             android:exported="false" />
         <activity

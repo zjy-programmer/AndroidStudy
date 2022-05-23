@@ -9,6 +9,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.390625" />
+        <entry key="app/src/main/res/layout/activity_coroutines_test.xml" value="0.375" />
         <entry key="app/src/main/res/layout/activity_custom_view.xml" value="0.13145896656534956" />
         <entry key="app/src/main/res/layout/activity_font_test.xml" value="0.3066123188405797" />
         <entry key="app/src/main/res/layout/activity_hen_coder_plus17.xml" value="0.42135416666666664" />
@@ -19,15 +20,24 @@
         <entry key="app/src/main/res/layout/activity_hen_coder_plus_chapter12.xml" value="0.46770833333333334" />
         <entry key="app/src/main/res/layout/activity_hen_coder_plus_chapter13.xml" value="0.46770833333333334" />
         <entry key="app/src/main/res/layout/activity_hencoder_plus.xml" value="0.4473958333333333" />
+        <entry key="app/src/main/res/layout/activity_image_picker_test.xml" value="0.5515625" />
         <entry key="app/src/main/res/layout/activity_load_class_test.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.5119791666666667" />
         <entry key="app/src/main/res/layout/activity_recyclerview.xml" value="0.34148550724637683" />
         <entry key="app/src/main/res/layout/activity_rx_ffmpeg.xml" value="0.36041666666666666" />
         <entry key="app/src/main/res/layout/activity_rxjava_test.xml" value="0.49743589743589745" />
+        <entry key="app/src/main/res/layout/activity_smart_refresh_layout_test.xml" value="0.25625" />
+        <entry key="app/src/main/res/layout/activity_tab_layout.xml" value="0.2703125" />
+        <entry key="app/src/main/res/layout/fragment_tab_content.xml" value="0.2703125" />
         <entry key="app/src/main/res/layout/holder_test.xml" value="0.2013677811550152" />
         <entry key="app/src/main/res/layout/item_holder.xml" value="0.5515625" />
+        <entry key="app/src/main/res/layout/item_tab.xml" value="0.2703125" />
+        <entry key="app/src/main/res/layout/layout_custom_crop.xml" value="0.5515625" />
+        <entry key="app/src/main/res/layout/layout_custom_item.xml" value="0.5515625" />
+        <entry key="app/src/main/res/layout/layout_custom_preview.xml" value="0.5515625" />
         <entry key="app/src/main/res/xml/network_security_config.xml" value="0.4777777777777778" />
+        <entry key="imagepicker/src/main/res/layout/picker_image_grid_item.xml" value="0.5515625" />
         <entry key="taskaffinitytest/src/main/res/layout/activity_bactivity.xml" value="0.5260416666666666" />
         <entry key="taskaffinitytest/src/main/res/layout/activity_main.xml" value="0.5260416666666666" />
       </map>

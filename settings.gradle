@@ -5,3 +5,4 @@ include ':baselibrary'
 println "这里是gradle第一阶段结束 第二阶段开始之前"
 include ':taskaffinitytest'
 include ':asm_lifecycle_plugin'
+include ':imagepicker'

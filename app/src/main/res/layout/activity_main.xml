@@ -146,9 +146,37 @@
             android:layout_height="wrap_content"
             android:onClick="toLoadClassTest"
             android:text="跳转到loadClass练习"
-            android:textSize="20sp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_db_test"/>
+            android:textSize="20sp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tv_coroutines_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="toCoroutinesTest"
+            android:text="跳转到协程练习"
+            android:textSize="20sp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tv_tab_layout_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="toTabLayoutTest"
+            android:text="跳转到tabLayout练习"
+            android:textSize="20sp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tv_smart_refresh_layout_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="toSmartRefreshLayoutTest"
+            android:text="跳转到smartRefreshLayout练习"
+            android:textSize="20sp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tv_image_picker_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="toImagePickerTest"
+            android:text="跳转到ImagePicker练习"
+            android:textSize="20sp"/>
     </LinearLayout>
 </ScrollView>

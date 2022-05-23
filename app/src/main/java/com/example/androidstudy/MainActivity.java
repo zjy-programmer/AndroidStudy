@@ -7,18 +7,23 @@ import android.os.Debug;
 import android.os.Process;
 import android.view.View;
 
+import com.example.androidstudy.any.Test1;
 import com.example.androidstudy.any.addressphoto.activity.AddressPhotoActivity;
 import com.example.androidstudy.any.contentprovider.ContentProviderTestActivity;
 import com.example.androidstudy.any.coordinatorlayout.CoordinatorLayoutTestActivity;
+import com.example.androidstudy.any.coroutines.CoroutinesTestActivity;
 import com.example.androidstudy.any.customview.CustomViewActivity;
 import com.example.androidstudy.any.db.SqlLiteDBActivity;
 import com.example.androidstudy.any.fonttest.FontTestActivity;
+import com.example.androidstudy.any.imagepicker.ImagePickerTestActivity;
 import com.example.androidstudy.any.loadclass.LoadClassTestActivity;
 import com.example.androidstudy.any.nestedscroll.NestedScrollActivity;
 import com.example.androidstudy.any.recyclerview.RecyclerviewActivity;
 import com.example.androidstudy.any.reparent.ReparentActivity;
 import com.example.androidstudy.any.rxffmpegtest.RxFFmpegActivity;
 import com.example.androidstudy.any.rxjava.RxjavaTestActivity;
+import com.example.androidstudy.any.smartrefresh.SmartRefreshLayoutTestActivity;
+import com.example.androidstudy.any.tablayout.TabLayoutActivity;
 import com.example.androidstudy.databinding.ActivityMainBinding;
 import com.example.androidstudy.hencoder.HenCoderActivity;
 import com.example.androidstudy.hencoderplus.HenCoderPlusActivity;
@@ -35,15 +40,15 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Debug.startMethodTracing();
+//        Debug.startMethodTracing();
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         // 会把trace文件放在/mnt/sdcard/Android/包名/files/dmtrace.trace
-        Debug.stopMethodTracing();
+//        Debug.stopMethodTracing();
 //        testAsDebugMode();
 
         // LeakCanary检测普通object是否发生泄漏是在watch(方法废弃 已被expectWeaklyReachable这个方法代替)5秒钟后开始检测 如果没有回收则表示泄漏
-        AppWatcher.INSTANCE.getObjectWatcher().expectWeaklyReachable(s, "检测局部变量s是否泄漏");
+//        AppWatcher.INSTANCE.getObjectWatcher().expectWeaklyReachable(s, "检测局部变量s是否泄漏");
     }
 
     /**
@@ -116,6 +121,26 @@ public class MainActivity extends BaseActivity {
 
     public void toLoadClassTest(View view) {
         toActivity(LoadClassTestActivity.class);
+    }
+
+    public void toCoroutinesTest(View view) {
+        toActivity(CoroutinesTestActivity.class);
+    }
+
+    public void toTabLayoutTest(View view) {
+        toActivity(TabLayoutActivity.class);
+    }
+
+    public void toSmartRefreshLayoutTest(View view) {
+        toActivity(SmartRefreshLayoutTestActivity.class);
+
+    }
+
+    public void toImagePickerTest(View view) {
+//        toActivity(ImagePickerTestActivity.class);
+        Test1 test1 = new Test1();
+        test1.a();
+        test1.b();
     }
 
     // 这是用来测试git commit --amend用的数据
