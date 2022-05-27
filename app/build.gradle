@@ -11,6 +11,7 @@ buildscript {
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 apply plugin: 'MyPlugin'
 apply plugin: 'androidstudy.asm.lifecycle'
@@ -66,6 +67,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
         freeCompilerArgs += '-Xjvm-default=all-compatibility'
+    }
+
+    dataBinding {
+        enabled = true
     }
 }
 

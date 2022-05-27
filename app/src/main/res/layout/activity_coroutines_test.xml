@@ -14,4 +14,10 @@
         android:textSize="20sp"
         android:text="延迟显示时间戳"/>
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/tv_view_model"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="学习viewModel协程"/>
+
 </LinearLayout>

@@ -1,5 +1,6 @@
 package com.example.androidstudy.any.coroutines
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -37,6 +38,10 @@ class CoroutinesTestActivity : AppCompatActivity() {
             mainScope.launch {
                 delayAndShow()
             }
+        }
+
+        binding.tvViewModel.setOnClickListener {
+            startActivity(Intent(this, CoroutinesTestActivity2::class.java))
         }
     }
 
