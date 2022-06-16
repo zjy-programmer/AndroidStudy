@@ -43,6 +43,10 @@ class CoroutinesTestActivity : AppCompatActivity() {
         binding.tvViewModel.setOnClickListener {
             startActivity(Intent(this, CoroutinesTestActivity2::class.java))
         }
+
+        binding.tvCoroutineExceptionHandler.setOnClickListener {
+            startActivity(Intent(this, CoroutineExceptionHandlerActivity::class.java))
+        }
     }
 
     private suspend fun delayAndShow() {

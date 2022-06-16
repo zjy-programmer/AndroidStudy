@@ -20,4 +20,10 @@
         android:layout_height="wrap_content"
         android:text="学习viewModel协程"/>
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/tv_coroutine_exception_handler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="coroutineExceptionHandler实战"/>
+
 </LinearLayout>

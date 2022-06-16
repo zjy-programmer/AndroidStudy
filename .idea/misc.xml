@@ -9,6 +9,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.390625" />
+        <entry key="app/src/main/res/layout/activity_coroutine_exception_handler.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/activity_coroutines_test.xml" value="0.375" />
         <entry key="app/src/main/res/layout/activity_coroutines_test2.xml" value="0.2523076923076923" />
         <entry key="app/src/main/res/layout/activity_custom_view.xml" value="0.13145896656534956" />

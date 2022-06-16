@@ -20,6 +20,9 @@
         android:theme="@style/Theme.AndroidStudy"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".any.coroutines.CoroutineExceptionHandlerActivity"
+            android:exported="false" />
+        <activity
             android:name=".any.coroutines.CoroutinesTestActivity2"
             android:exported="false" />
         <activity
