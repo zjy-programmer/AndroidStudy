@@ -2,6 +2,7 @@ package com.example.androidstudy
 
 import kotlinx.coroutines.*
 import org.junit.Test
+import java.io.IOException
 import kotlin.ArithmeticException
 
 /**
@@ -189,6 +190,80 @@ class CoroutineTest05 {
         val job = scope.launch {
             launch(handler) {
                 throw IllegalArgumentException()
+            }
+        }
+        job.join()
+    }
+
+    @Test
+    fun `test cancel and exception`() = runBlocking {
+        val job = launch {
+            val child = launch {
+                try {
+                    delay(Long.MAX_VALUE)
+                } finally {
+                    println("Child is canceled.")
+                }
+            }
+            yield()
+            println("Cancelling child.")
+            child.cancelAndJoin()
+            yield()
+            println("Parent is not cancelled.")
+        }
+        job.join()
+    }
+
+    @Test
+    fun `test cancel and exception2`() = runBlocking {
+        val handler = CoroutineExceptionHandler{_, exception ->
+            println("Caught $exception")
+        }
+        val job = GlobalScope.launch(handler) {
+            val job1 = launch {
+                try {
+                    delay(Long.MAX_VALUE)
+                } finally {
+                    withContext(NonCancellable) {
+                        println("Children are canceled, but exception is not handled until all children terminate")
+                        delay(100)
+                        println("The first child finished its non cancellable block")
+                    }
+                }
+            }
+
+            val job2 = launch {
+                delay(10)
+                println("Second child throws an exception")
+                throw ArithmeticException()
+            }
+        }
+        job.join()
+    }
+
+    @Test
+    fun `test exception aggregation`() = runBlocking {
+        val handler = CoroutineExceptionHandler {_, exception ->
+            println("Caught $exception ${exception.suppressed.contentToString()}")
+        }
+        val job = GlobalScope.launch(handler) {
+            launch {
+                try {
+                    delay(Long.MAX_VALUE)
+                } finally {
+                    throw ArithmeticException()
+                }
+            }
+            launch {
+                try {
+                    delay(Long.MAX_VALUE)
+                } finally {
+                    throw IndexOutOfBoundsException()
+                }
+            }
+            launch {
+                delay(100)
+                throw IOException()
             }
         }
         job.join()
