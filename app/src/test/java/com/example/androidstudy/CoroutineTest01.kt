@@ -10,7 +10,7 @@ import org.junit.Test
  * Author: zjy
  * Description:
  */
-class CoroutineTest10 {
+class CoroutineTest01 {
     @Test
     fun `11`() = runBlocking {
         val job1 = launch {
