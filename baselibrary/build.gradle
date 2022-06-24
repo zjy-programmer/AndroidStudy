@@ -39,9 +39,8 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
     api 'com.squareup.okhttp3:okhttp:3.11.0'
     api 'com.github.bumptech.glide:okhttp3-integration:4.11.0'
-//    implementation "androidx.core:core-ktx:$kotlin_version"
     implementation "androidx.core:core-ktx:1.6.0"
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.5.31"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
     api 'com.github.microshow:RxFFmpeg:4.9.0'
     api 'com.arthenica:mobile-ffmpeg-full:4.4'
