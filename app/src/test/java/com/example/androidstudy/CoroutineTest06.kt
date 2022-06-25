@@ -3,6 +3,7 @@ package com.example.androidstudy
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.*
 import org.junit.Test
+import kotlin.system.measureTimeMillis
 
 /**
  * @author zjy
@@ -13,6 +14,7 @@ class CoroutineTest06 {
 
     // 返回了多个值，但不是异步
     fun simpleList(): List<Int> = listOf(1, 2, 3)
+
     // 返回了多个值，是同步
     fun simpleSequence(): Sequence<Int> = sequence {
         for (i in 1..3) {
@@ -56,7 +58,7 @@ class CoroutineTest06 {
     @Test
     fun `test multiple values3`() = runBlocking {
         launch {
-            for(i in 1..3) {
+            for (i in 1..3) {
                 println("I'm not blocked $i")
                 delay(1500)
             }
@@ -151,5 +153,120 @@ class CoroutineTest06 {
         events().onEach { println("Event: $it ${Thread.currentThread().name}") }
             .launchIn(/*CoroutineScope(Dispatchers.IO)*/this)
             .join()
+    }
+
+    fun simpleFlow6() = flow<Int> {
+        for (i in 1..3) {
+            delay(1000)
+            emit(i)
+            println("Emitting $i")
+        }
+    }
+
+    @Test
+    fun `test cancel flow`() = runBlocking {
+        withTimeoutOrNull(2500) {
+            simpleFlow6().collect { println(it) }
+        }
+        println("Done")
+    }
+
+    fun simpleFlow7() = flow<Int> {
+        for (i in 1..5) {
+            emit(i)
+            println("Emitting $i")
+        }
+    }
+
+    @Test
+    fun `test cancel flow check`() = runBlocking {
+//        simpleFlow7().collect {
+//            println(it)
+//            if (it == 3) {
+//                cancel()
+//            }
+//        }
+        // 这样取消是不行的 来不及取消了
+//        (1..5).asFlow().collect {
+//            println(it)
+//            if (it == 3) {
+//                cancel()
+//            }
+//        }
+
+        // 需要加上cancellable才能取消
+        (1..5).asFlow().cancellable().collect {
+            println(it)
+            if (it == 3) {
+                cancel()
+            }
+        }
+    }
+
+    fun simpleFlow8() = flow<Int> {
+        for (i in 1..3) {
+            delay(100)
+            emit(i)
+            println("Emitting $i ${Thread.currentThread().name} 发射事件的时间：${System.currentTimeMillis()}")
+        }
+    }
+
+    @Test
+    fun `test flow back pressure`() = runBlocking {
+//        val time  = measureTimeMillis {
+//            simpleFlow8().collect {
+//                delay(300)
+//                println("Collected $it ${Thread.currentThread().name}")
+//            }
+//        }
+//        println("Collected in $time ms")
+
+        // 优化一下 加缓存 每100ms往buffer发事件 collect是从buffer里取事件
+//        val time = measureTimeMillis {
+//            println("调用simpleFlow8前：${System.currentTimeMillis()}")
+//            simpleFlow8()
+//                .buffer(50)
+//                .collect {
+//                    delay(300)
+//                    println("Collected $it ${Thread.currentThread().name}")
+//                }
+//        }
+//        println("Collected in $time ms")
+
+        // 上边发送和收集在同一个线程 切换个线程也可以做到
+//        val time = measureTimeMillis {
+//            println("调用simpleFlow8前：${System.currentTimeMillis()}")
+//            simpleFlow8()
+//                .flowOn(Dispatchers.Default)
+//                .collect {
+//                    delay(300)
+//                    println("Collected $it ${Thread.currentThread().name}")
+//                }
+//        }
+//        println("Collected in $time ms")
+
+        // 上边几种方式是通过改变上游的发送速度 下面是改变下游的处理速度
+        // 或者使用conflate 这个会丢中间的数据
+//        val time = measureTimeMillis {
+//            println("调用simpleFlow8前：${System.currentTimeMillis()}")
+//            simpleFlow8()
+//                .conflate()
+//                .collect {
+//                    delay(300)
+//                    println("Collected $it ${Thread.currentThread().name}")
+//                }
+//        }
+//        println("Collected in $time ms")
+
+        // 或使用collectLatest 只处理最后一个
+        val time = measureTimeMillis {
+            println("调用simpleFlow8前：${System.currentTimeMillis()}")
+            simpleFlow8()
+                .collectLatest {
+                    delay(300)
+                    println("Collected $it ${Thread.currentThread().name}")
+                }
+        }
+        println("Collected in $time ms")
     }
 }
