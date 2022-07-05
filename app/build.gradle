@@ -24,6 +24,9 @@ MyExtend {
 
 android {
     compileSdkVersion 29
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
 
     defaultConfig {
         applicationId "com.example.androidstudy"
@@ -74,15 +77,15 @@ android {
     }
 }
 
-gradle.taskGraph.whenReady {
-    println "当所有task已经准备好了"
-
-    // 打印task对应的类
-    it.allTasks.each { task ->
-//        println "${task.name} : ${task.class.name}"
-        println "${task.name} : ${task.class.name - '_Decorated'}"
-    }
-}
+//gradle.taskGraph.whenReady {
+//    println "当所有task已经准备好了"
+//
+//    // 打印task对应的类
+//    it.allTasks.each { task ->
+////        println "${task.name} : ${task.class.name}"
+//        println "${task.name} : ${task.class.name - '_Decorated'}"
+//    }
+//}
 
 afterEvaluate {
     println "这里是gradle第二阶段结束 第三阶段开始之前"
