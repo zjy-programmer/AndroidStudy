@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.example.androidstudy.any.coroutines.flowpractice.activity.FlowPracticeActivity
 import com.example.androidstudy.databinding.ActivityCoroutinesTestBinding
 import kotlinx.coroutines.*
 
@@ -46,6 +47,10 @@ class CoroutinesTestActivity : AppCompatActivity() {
 
         binding.tvCoroutineExceptionHandler.setOnClickListener {
             startActivity(Intent(this, CoroutineExceptionHandlerActivity::class.java))
+        }
+
+        binding.tvFlow.setOnClickListener {
+            startActivity(Intent(this, FlowPracticeActivity::class.java))
         }
     }
 

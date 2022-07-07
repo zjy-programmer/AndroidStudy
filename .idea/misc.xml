@@ -13,6 +13,7 @@
         <entry key="app/src/main/res/layout/activity_coroutines_test.xml" value="0.375" />
         <entry key="app/src/main/res/layout/activity_coroutines_test2.xml" value="0.2523076923076923" />
         <entry key="app/src/main/res/layout/activity_custom_view.xml" value="0.13145896656534956" />
+        <entry key="app/src/main/res/layout/activity_flow_practice.xml" value="0.2817028985507246" />
         <entry key="app/src/main/res/layout/activity_font_test.xml" value="0.3066123188405797" />
         <entry key="app/src/main/res/layout/activity_hen_coder_plus17.xml" value="0.42135416666666664" />
         <entry key="app/src/main/res/layout/activity_hen_coder_plus19.xml" value="0.42135416666666664" />
@@ -32,6 +33,8 @@
         <entry key="app/src/main/res/layout/activity_rxjava_test.xml" value="0.49743589743589745" />
         <entry key="app/src/main/res/layout/activity_smart_refresh_layout_test.xml" value="0.25625" />
         <entry key="app/src/main/res/layout/activity_tab_layout.xml" value="0.2703125" />
+        <entry key="app/src/main/res/layout/fragment_download.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.2817028985507246" />
         <entry key="app/src/main/res/layout/fragment_tab_content.xml" value="0.2703125" />
         <entry key="app/src/main/res/layout/holder_test.xml" value="0.2013677811550152" />
         <entry key="app/src/main/res/layout/item_holder.xml" value="0.5515625" />
