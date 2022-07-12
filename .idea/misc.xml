@@ -36,9 +36,11 @@
         <entry key="app/src/main/res/layout/fragment_download.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.2817028985507246" />
         <entry key="app/src/main/res/layout/fragment_tab_content.xml" value="0.2703125" />
+        <entry key="app/src/main/res/layout/fragment_user.xml" value="0.2817028985507246" />
         <entry key="app/src/main/res/layout/holder_test.xml" value="0.2013677811550152" />
         <entry key="app/src/main/res/layout/item_holder.xml" value="0.5515625" />
         <entry key="app/src/main/res/layout/item_tab.xml" value="0.2703125" />
+        <entry key="app/src/main/res/layout/item_user.xml" value="0.13333333333333333" />
         <entry key="app/src/main/res/layout/layout_custom_crop.xml" value="0.5515625" />
         <entry key="app/src/main/res/layout/layout_custom_item.xml" value="0.5515625" />
         <entry key="app/src/main/res/layout/layout_custom_preview.xml" value="0.5515625" />

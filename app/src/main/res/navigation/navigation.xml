@@ -13,10 +13,18 @@
         <action
             android:id="@+id/action_homeFragment_to_downloadFragment"
             app:destination="@id/downloadFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_userFragment"
+            app:destination="@id/userFragment" />
     </fragment>
     <fragment
         android:id="@+id/downloadFragment"
         android:name="com.example.androidstudy.any.coroutines.flowpractice.fragment.DownloadFragment"
         android:label="fragment_download"
         tools:layout="@layout/fragment_download" />
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.example.androidstudy.any.coroutines.flowpractice.fragment.UserFragment"
+        android:label="fragment_user"
+        tools:layout="@layout/fragment_user" />
 </navigation>
