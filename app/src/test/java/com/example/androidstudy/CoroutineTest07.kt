@@ -113,11 +113,7 @@ class CoroutineTest07 {
             .flatMapLatest { requestFlow(it) }
             .collect { println("$it at ${System.currentTimeMillis() - startTime} ms from start") }
     }
- * @author zjy
- * @date 2022/7/4 6:31 下午
- * @description
- */
-class CoroutineTest07 {
+
     fun simpleFlow() = flow<Int> {
         for (i in 1..3) {
             println("Emitting $i")
