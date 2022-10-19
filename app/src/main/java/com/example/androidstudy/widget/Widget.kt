@@ -2,6 +2,8 @@ package com.example.androidstudy.widget
 
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.view.marginEnd
+import androidx.core.view.marginStart
 
 /**
  * @author zjy
@@ -13,7 +15,7 @@ import android.widget.TextView
 fun TextView.toNonBreakingString(text: String?): String {
     if (text == null) return ""
     val container = parent as? ViewGroup ?: return text
-    val lineWidth = (container.width - container.paddingStart - container.paddingEnd).toFloat()
+    val lineWidth = (container.width - container.paddingStart - container.paddingEnd - marginStart - marginEnd).toFloat()
     val maxCharsInOneLine = paint.breakText(text, 0, text.length, true, lineWidth, null)
     if (maxCharsInOneLine == 0) return text
     val sb = StringBuilder()

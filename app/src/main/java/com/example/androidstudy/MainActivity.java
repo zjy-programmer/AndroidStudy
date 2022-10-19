@@ -1,7 +1,6 @@
 package com.example.androidstudy;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Debug;
 import android.os.Process;
@@ -15,11 +14,9 @@ import com.example.androidstudy.any.coroutines.CoroutinesTestActivity;
 import com.example.androidstudy.any.customview.CustomViewActivity;
 import com.example.androidstudy.any.db.SqlLiteDBActivity;
 import com.example.androidstudy.any.fonttest.FontTestActivity;
-import com.example.androidstudy.any.imagepicker.ImagePickerTestActivity;
 import com.example.androidstudy.any.loadclass.LoadClassTestActivity;
 import com.example.androidstudy.any.nestedscroll.NestedScrollActivity;
 import com.example.androidstudy.any.recyclerview.RecyclerviewActivity;
-import com.example.androidstudy.any.reparent.ReparentActivity;
 import com.example.androidstudy.any.rxffmpegtest.RxFFmpegActivity;
 import com.example.androidstudy.any.rxjava.RxjavaTestActivity;
 import com.example.androidstudy.any.smartrefresh.SmartRefreshLayoutTestActivity;
@@ -28,9 +25,6 @@ import com.example.androidstudy.databinding.ActivityMainBinding;
 import com.example.androidstudy.hencoder.HenCoderActivity;
 import com.example.androidstudy.hencoderplus.HenCoderPlusActivity;
 import com.example.baselibrary.activity.BaseActivity;
-
-import leakcanary.AppWatcher;
-import leakcanary.LeakCanary;
 
 public class MainActivity extends BaseActivity {
     private ActivityMainBinding binding;

@@ -8,6 +8,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../.gradle/caches/transforms-2/files-2.1/5752af52a549f80acff99eec36dc0fdc/jetified-permissionx-1.4.0/res/drawable/permissionx_default_dialog_bg.xml" value="0.3665" />
+        <entry key="../../../.gradle/caches/transforms-2/files-2.1/ea3fec9852f75d2b5044bde20463c835/jetified-appcompat-resources-1.2.0/res/drawable/abc_vector_test.xml" value="0.3665" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.390625" />
         <entry key="app/src/main/res/layout/activity_coroutine_exception_handler.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/activity_coroutines_test.xml" value="0.375" />
