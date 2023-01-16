@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/baselibrary" />
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/imagepicker" />
+            <option value="$PROJECT_DIR$/skinlib" />
             <option value="$PROJECT_DIR$/taskaffinitytest" />
           </set>
         </option>

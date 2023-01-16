@@ -8,12 +8,14 @@ import android.view.View;
 
 import com.example.androidstudy.any.Test1;
 import com.example.androidstudy.any.addressphoto.activity.AddressPhotoActivity;
+import com.example.androidstudy.any.changeskin.ChangeSkinActivity;
 import com.example.androidstudy.any.contentprovider.ContentProviderTestActivity;
 import com.example.androidstudy.any.coordinatorlayout.CoordinatorLayoutTestActivity;
 import com.example.androidstudy.any.coroutines.CoroutinesTestActivity;
 import com.example.androidstudy.any.customview.CustomViewActivity;
 import com.example.androidstudy.any.db.SqlLiteDBActivity;
 import com.example.androidstudy.any.fonttest.FontTestActivity;
+import com.example.androidstudy.any.imagepicker.ImagePickerTestActivity;
 import com.example.androidstudy.any.loadclass.LoadClassTestActivity;
 import com.example.androidstudy.any.nestedscroll.NestedScrollActivity;
 import com.example.androidstudy.any.recyclerview.RecyclerviewActivity;
@@ -131,10 +133,14 @@ public class MainActivity extends BaseActivity {
     }
 
     public void toImagePickerTest(View view) {
-//        toActivity(ImagePickerTestActivity.class);
-        Test1 test1 = new Test1();
-        test1.a();
-        test1.b();
+        toActivity(ImagePickerTestActivity.class);
+//        Test1 test1 = new Test1();
+//        test1.a();
+//        test1.b();
+    }
+
+    public void changeSkin(View view) {
+        toActivity(ChangeSkinActivity.class);
     }
 
     // 这是用来测试git commit --amend用的数据

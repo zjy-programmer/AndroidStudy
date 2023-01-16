@@ -11,6 +11,7 @@
         <entry key="../../../.gradle/caches/transforms-2/files-2.1/5752af52a549f80acff99eec36dc0fdc/jetified-permissionx-1.4.0/res/drawable/permissionx_default_dialog_bg.xml" value="0.3665" />
         <entry key="../../../.gradle/caches/transforms-2/files-2.1/ea3fec9852f75d2b5044bde20463c835/jetified-appcompat-resources-1.2.0/res/drawable/abc_vector_test.xml" value="0.3665" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.390625" />
+        <entry key="app/src/main/res/layout/activity_change_skin.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_coroutine_exception_handler.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/activity_coroutines_test.xml" value="0.375" />
         <entry key="app/src/main/res/layout/activity_coroutines_test2.xml" value="0.2523076923076923" />
@@ -25,7 +26,7 @@
         <entry key="app/src/main/res/layout/activity_hen_coder_plus_chapter12.xml" value="0.46770833333333334" />
         <entry key="app/src/main/res/layout/activity_hen_coder_plus_chapter13.xml" value="0.46770833333333334" />
         <entry key="app/src/main/res/layout/activity_hen_coder_test.xml" value="0.37604166666666666" />
-        <entry key="app/src/main/res/layout/activity_hencoder_plus.xml" value="0.4473958333333333" />
+        <entry key="app/src/main/res/layout/activity_hencoder_plus.xml" value="0.30867892261650276" />
         <entry key="app/src/main/res/layout/activity_image_picker_test.xml" value="0.5515625" />
         <entry key="app/src/main/res/layout/activity_load_class_test.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />

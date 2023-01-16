@@ -20,6 +20,9 @@
         android:theme="@style/Theme.AndroidStudy"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".any.changeskin.ChangeSkinActivity"
+            android:exported="false" />
+        <activity
             android:name=".any.coroutines.flowpractice.activity.FlowPracticeActivity"
             android:exported="false" />
         <activity
